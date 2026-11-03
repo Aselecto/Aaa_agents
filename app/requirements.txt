@@ -5,3 +5,6 @@ langgraph==0.2.39
 langchain-core==0.3.10
 python-dotenv==1.0.1
 pydantic-settings>=2.16.0
+# Инструменты разработки (Linter, Formatter, Type Checker)
+ruff==0.6.9
+mypy==1.11.2
