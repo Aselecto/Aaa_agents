@@ -16,7 +16,11 @@ MAX_DELIVERABLES = 3  # больше файлов — просим модель 
 
 
 class _HasId(Protocol):
-    id: str
+    """Любой объект с полем `id`. Поле только для чтения (property), иначе mypy
+    не принимает `SectionSpec`, у которого `id` — не просто `str`, а `Literal`."""
+
+    @property
+    def id(self) -> str: ...
 
 
 Item = TypeVar("Item", bound=_HasId)
