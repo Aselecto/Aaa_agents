@@ -10,4 +10,5 @@ class ProjectState(BaseModel):
     task_specifications: Optional[Dict[str, Any]] = None
     computed_data: Optional[Dict[str, Any]] = None
     generated_content: Optional[Dict[str, Any]] = None
+    qa_report: Optional[Dict[str, Any]] = None
     loop_count: int = 0
